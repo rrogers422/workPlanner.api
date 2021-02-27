@@ -17,29 +17,21 @@ currentDate.text(moment().format('MMM Do, YYYY'));
 // })
 // localStorage.setItem("saveInfo", JSON.stringify(saveInfo));
 
-var hourContainers = $(".col-2");
-hourContainers.each(function(index){
+var hourContainers = $(".row");
+hourContainers.each(function(index) {
     console.log($(this).children('textarea'))
     let rowHour = $(this).attr('id');
-    console.log(rowHour);
     //referenceing the split id in position 1 from 0
+
+    if(moment().hour() < rowHour ){
+    $(this).children('textarea').addClass("future")
+    }
+    else if(moment().hour() == rowHour){
+        $(this).children('textarea').addClass("present")
+    }
+    else if(moment().hour() > rowHour){
+        $(this).children('textarea').addClass("future")
+    }
 });
-    //jquery method loop over divs
-//     $( "time-block" ).each(function() {
-//         var timeBlock = $("#row").attr("value")
-//         console.log(timeBlock)
-//       });
-//     if(currentDate < timeBlock ){
-//     $(this).addClass("#past")
-//     }
-//     else if(currentDate === timeBlock){
-//         $(this).removeClass("#past")
-//         $(this).addClass("#present")
-//     }
-//     else if(currentDate > timeBlock){
-//         $(this).removeClass("#present")
-//         $(this).addClass("#future")
-//     }
-// };
 
 //hourContainers();
