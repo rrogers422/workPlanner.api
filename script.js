@@ -25,7 +25,7 @@ hourContainers.each(function(index) {
 var saveSchedule = window.localStorage;
 var saveInfo = [];
 //var i = 0;
-let textInfo
+//let textInfo = JSON.parse(saveSchedule.getItem(saveInfo));
 
 /*.on click function to save info thats input to local strage 
 sets variables to grab value from the text area and the attribute on ID
@@ -48,37 +48,7 @@ if (saveSchedule.length > i) {
 };
 
 
-//Comment lines are rough drafts of local storage and onclick funtion/inputs
-
-// var saveSchedule = window.localStorage;
-// var saveInfo = [$('this').children('textArea').addClass("col-8")];
-// var i = x;
-// //onclick function to set value to variable and save it to local storage 
-
-// $('.saveBtn').on('click', function(x){
-//     if(saveSchedule) {
-//         localStorage.setItem("textArea"+i, JSON.stringify(saveInfo));{
-//         for(var i = 0; i < saveSchedule.length, i++;){
-//             saveInfo = saveSchedule.getItem(key, 'textArea' +i);
-//             console.log(JSON.parse(saveInfo))}
-//         }
-//     }
-//     });
 
 
 
 
-// $('.saveBtn').on('click', funtion(index){
-//         saveSchedule.push({$('this').siblings('textarea').value();
-//         saveSchedule.push($('this').attr('id'));
-//         saveSchedule.setItem(JSON.stringify('saveInfo'))
-//         }):
-
-// //save time and value to variable, then use local storage line 
-// function plannerText(){
-// //saving to local storage using jquery click function(not finished)//
-// $('.saveBtn').on('click', function (){
-// saveInfo.push()
-// //take value of text area, pusg into array//
-// })
-// localStorage.setItem("saveInfo", JSON.stringify(saveInfo))
